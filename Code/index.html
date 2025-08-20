@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Energy Meter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 24px;
+        }
+        .status {
+            color: gray;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .tabs button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: #e0e0e0;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .control {
+            text-align: center;
+        }
+        .control label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .unit-bill {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .unit, .bill {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>IoT Energy Meter</h1>
+            <span class="status">Offline</span>
+        </div>
+        
+        <div class="tabs">
+            <button class="active">Live</button>
+            <button>1h</button>
+            <button>6h</button>
+            <button>1d</button>
+            <button>1w</button>
+            <button>1mo</button>
+            <button>3mo</button>
+            <button>6mo</button>
+            <button>1y</button>
+        </div>
+        
+        <div class="controls">
+            <div class="control">
+                <label for="load-one">Load One</label>
+                <input type="checkbox" id="load-one">
+            </div>
+            <div class="control">
+                <label for="load-two">Load Two</label>
+                <input type="checkbox" id="load-two" checked>
+            </div>
+            <div class="control">
+                <label for="load-three">Load Three</label>
+                <input type="checkbox" id="load-three">
+            </div>
+        </div>
+        
+        <div class="unit-bill">
+            <div class="unit">
+                <strong>Unit</strong>
+                
+            </div>
+            <div class="bill">
+                <strong>Bill</strong>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
